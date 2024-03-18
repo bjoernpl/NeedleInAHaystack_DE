@@ -16,9 +16,9 @@ class CommandArgs():
     evaluator: str = "openai"
     model_name: str = "gpt-3.5-turbo-0125"
     evaluator_model_name: Optional[str] = "gpt-3.5-turbo-0125"
-    needle: Optional[str] = "\nThe best thing to do in San Francisco is eat a sandwich and sit in Dolores Park on a sunny day.\n"
-    haystack_dir: Optional[str] = "PaulGrahamEssays"
-    retrieval_question: Optional[str] = "What is the best thing to do in San Francisco?"
+    needle: Optional[str] = "\nDie Beste Aktivität in San Francisco ist es ein Sandwich zu essen und an einem sonnigen Tag in Dolores Park zu sitzen.\n"
+    haystack_dir: Optional[str] = "Grimm"
+    retrieval_question: Optional[str] = "Was ist die beste Aktivität in San Francisco?"
     results_version: Optional[int] = 1
     context_lengths_min: Optional[int] = 1000
     context_lengths_max: Optional[int] = 16000
@@ -40,9 +40,9 @@ class CommandArgs():
     # Multi-needle parameters
     multi_needle: Optional[bool] = False
     needles: list[str] = field(default_factory=lambda: [
-        " Figs are one of the secret ingredients needed to build the perfect pizza. ", 
-        " Prosciutto is one of the secret ingredients needed to build the perfect pizza. ", 
-        " Goat cheese is one of the secret ingredients needed to build the perfect pizza. "
+        " Feigen sind eine der Geheimzutaten um die perfekte Pizza zu bauen. ", 
+        " Senf ist eine der Geheimzutaten um die perfekte Pizza zu bauen. ",
+        " Ziegenkäse ist eine der Geheimzutaten um die perfekte Pizza zu bauen. ",
     ])
 
 def get_model_to_test(args: CommandArgs) -> ModelProvider:
